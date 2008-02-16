@@ -27,7 +27,7 @@ class GithubTwitter
     proc = Proc.new do 
       commit
     end
-    @twitter.post(@template.result(proc)[0,140])
+    @twitter.post(@template.result(proc))
   end
   
 end
