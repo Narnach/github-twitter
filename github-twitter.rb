@@ -12,7 +12,7 @@ class GithubTwitter
     payload = JSON.parse(payload)
     return unless payload.keys.include?("repository")
     @repo = payload["repository"]["name"]
-    @template = ERB.new(REPOS[@repo]["template"] || "[<%= commit['repo'] %>] <%= commit['author']['name'] %> (<%= commit['url'] %>) - <%= commit['message'] %>")
+    @template = ERB.new(REPOS[@repo]["template"] || "[<%= commit['repo'] %>] <%= commit['url'] %> by <%= commit['author']['name'] %> - <%= commit['message'] %>")
     @twitter = connect(@repo)
     payload["commits"].each { |c| process_commit(c.last) }
   end
@@ -27,7 +27,7 @@ class GithubTwitter
     proc = Proc.new do 
       commit
     end
-    @twitter.update(@template.result(proc))
+    @twitter.post(@template.result(proc)[0,140])
   end
   
 end
