@@ -1,0 +1,8 @@
+repo-name:
+  email: nunemaker@gmail.com
+  password: p00p
+  template: "[<%= commit['repo'] %>] <%= commit['author']['name'] %> (<%= commit['url'] %>) - <%= commit['message'] %>"
+repo-name-2:
+  email: nunemaker@gmail.com
+  password: p00p
+  #template: if template is ommitted, a default will be used

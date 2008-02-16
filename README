@@ -1,0 +1,14 @@
+github-twitter
+===============
+ 
+Toss your github pushes to Twitter
+ 
+requirements
+============
+sudo gem install json twitter sinatra
+ 
+instructions
+============
+cp config.yml.example config.yml
+vim config.yml
+ruby github-twitter.rb
