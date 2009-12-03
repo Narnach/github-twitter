@@ -14,3 +14,8 @@ instructions
 cp config.yml.example config.yml
 nano config.yml
 rackup config.ru
+
+sample output
+=============
+
+    [github-twitter] http://bit.ly/5hXG93 Wes Oldenbeuving: Added public and tmp dir required for passenger deployment
