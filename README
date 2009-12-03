@@ -1,14 +1,16 @@
 github-twitter
 ===============
- 
-Toss your github pushes to Twitter. All props go to jnewland for the idea (http://github.com/jnewland/github-campfire/tree/master)
- 
+
+Toss your github pushes to Twitter. All props go to jnewland for the idea (http://github.com/jnewland/github-campfire/tree/master) and to jnunemaker for the first version (http://github.com/jnunemaker/github-twitter).
+
+I resurrected the project because I wanted the post-receive twitter hook of github to show me the commit message of each commit. The latest version of the Twitter gem is now required, as well as the bitly gem for URL shortening.
+
 requirements
 ============
-sudo gem install json twitter sinatra
- 
+sudo gem install json twitter sinatra bitly
+
 instructions
 ============
 cp config.yml.example config.yml
-vim config.yml
-ruby github-twitter.rb
+nano config.yml
+rackup config.ru
