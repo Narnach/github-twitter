@@ -30,6 +30,7 @@ class GithubTwitter
     proc = Proc.new do
       commit
     end
+    commit['message'] = commit['message'].split("\n").first
     commit['url'] = @bitly.shorten(commit['url']).short_url if @bitly
     @twitter.update(@template.result(proc))
   end
