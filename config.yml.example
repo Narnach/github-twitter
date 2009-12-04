@@ -1,11 +1,11 @@
 repo-name:
-  email: nunemaker@gmail.com
-  password: p00p
+  username: nunemaker@gmail.com # Twitter login
+  password: p00p                # Twitter password
   template: "[<%= commit['repo'] %>] <%= commit['author']['name'] %> <%= commit['message'] %>"
   bitly_username: narnach
   bitly_api_key: some key
 repo-name-2:
-  email: nunemaker@gmail.com
+  username: nunemaker@gmail.com
   password: p00p
   #template: if template is ommitted, a default will be used
   #bitly_username: if bitly username and/or api key are omitted, no url shortening is used
